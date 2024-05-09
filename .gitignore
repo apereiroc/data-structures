@@ -1,0 +1,7 @@
+*.o
+*.json
+*.dblite
+.cache/
+
+# binaries
+linked_list
