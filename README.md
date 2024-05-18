@@ -4,6 +4,8 @@ My personal implementation of common data structures
 ## Usage
 
 ```bash
-scons
+scons -j2
 ./linked_list
+./dynamic_array
+
 ```
