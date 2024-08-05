@@ -55,12 +55,8 @@ public:
   void print() {
     std::string print_str{"[ "};
 
-    std::size_t num_elements_visited{0};
     for (std::size_t i = 0; i < size_; i++) {
-      print_str += std::to_string(data_[i]);
-
-      if (num_elements_visited != size_)
-        print_str += " ";
+      print_str += std::to_string(data_[i]) + " ";
     }
 
     print_str += "]";
