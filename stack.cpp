@@ -30,6 +30,8 @@ public:
   }
 
   inline void print() { data.print(); }
+
+  inline void reserve(const std::size_t &new_size) { data.reserve(new_size); }
 };
 
 int main() {

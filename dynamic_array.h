@@ -41,6 +41,7 @@ public:
   // Deleted copy constructor to prevent copying
   Array(const Array &other) = delete;
 
+  // Resize array if it needs to grow
   inline void resize(const std::size_t &new_capacity) {
     auto new_data{std::make_unique<T[]>(new_capacity)};
 
@@ -50,6 +51,13 @@ public:
 
     data_ = std::move(new_data);
     capacity_ = new_capacity;
+  }
+
+  // Preallocate memory without changing the size
+  inline void reserve(const std::size_t &new_capacity) {
+    if (new_capacity > capacity_) {
+      resize(new_capacity);
+    }
   }
 
   inline void push_back(const T &val) {
