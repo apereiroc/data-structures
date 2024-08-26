@@ -15,15 +15,15 @@ docker build -t data-structures .
 Then run the executables
 
 ```bash
-docker run -it data-structures ./linked_list
+docker run --rm data-structures ./linked_list
 ```
 
 ```bash
-docker run -it data-structures ./dynamic_array
+docker run --rm data-structures ./dynamic_array
 ```
 
 ```bash
-docker run -it data-structures ./stack
+docker run --rm data-structures ./stack
 ```
 
 ## Usage
